@@ -15,11 +15,12 @@ SETUP
     pip install python-dotenv
    ```
 
-4) Create a Censys search account at [Censys Search API](https://search.censys.io/api)
-   Go to your account page under the API Tab and copy the API ID and the Secret key.
+4) Create a Censys search account at [Censys Search API](https://search.censys.io/api).
+
+5) Go to your account page under the API Tab and copy the API ID and the Secret key.
    These are your API credentials
    
-5) Create a .env file in the project’s root directory to store your Censys API credentials:
+6) Create a .env file in the project’s root directory to store your Censys API credentials:
    The file should contain this, but with you ID and Key
   ```
    CENSYS_API_ID=<your_api_id_here>
@@ -48,13 +49,12 @@ While the project is running enter:
 `services.service_name: HTTP`
 into the input field and hit search
 
-This will return 5 {IP, Number of services} pairs with an option to load 5 more 
+This will return five {IP, Number of services} pairs with an option to load five more 
 until results of the search are exhausted. When exhausted an alert will pop up
 letting the user know there are no more results and the load more button will disappear
 
 This is an example pair:
 `1.1.1.1 - Protocols: 12`
 
-For errors the user will be notified by alert, or an output to the browser console
-
+For errors the user will be notified by alert, or an output to the browser console.
 This runs on a template which should make it safe from attacks with bad characters.
