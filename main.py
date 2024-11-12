@@ -20,7 +20,6 @@ def index():
 def search():
     # Define your query to search for hosts with HTTP service
     query = request.args.get('query', '')
-    # query = "services.service_name: HTTP"
     
     # Perform search with a per_page limit of 5 results per page
     results_list = censys_client.search(query=query, per_page=5, pages=10)
@@ -35,7 +34,6 @@ def search():
             services = host.get("services", [])
             
             # Append the IP and the number of services to results
-            # print({"ip": ip, "num_services": len(services)})
             response.append({"ip": ip, "num_services": len(services)})
 
     return response
