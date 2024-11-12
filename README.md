@@ -9,7 +9,7 @@ SETUP
 1) Git clone the project!
 
 2) Install the required packages to run the project.
-    The following commands wiil install the package you need
+    The following commands will install the package you need
    ```
     pip install flask 
     pip install censys 
